@@ -1,0 +1,67 @@
+@mixin flex ($gap: 0px) {
+  display: flex;
+}
+
+@mixin flex-start-end ($gap: 0px) {
+  display: flex;
+  align-items: end;
+  gap: $gap;
+}
+
+@mixin flex-v-center ($gap: 0px) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin flex-h-center ($gap: 0px) {
+  display: flex;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin flex-all-center ($gap: 0px) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin flex-all-sb ($gap: 0px) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $gap;
+}
+
+@mixin flex-column-start-center ($gap: 0px) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: $gap;
+}
+
+@mixin flex-column-start ($gap: 0px) {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: $gap;
+}
+
+@mixin flex-column-end ($gap: 0px) {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: start;
+  gap: $gap;
+}
+
+@mixin flex-column-center ($gap: 0px) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}

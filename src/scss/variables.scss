@@ -1,0 +1,19 @@
+// base
+$content-width: 1170px;
+$wrapper-offset: 15px;
+$wrapper-width: calc($content-width + ($wrapper-offset * 2));
+
+// colors
+$color-contrast: hsl(120, 100%, 35%);
+$color-dark-primary: #000000;
+$color-dark-complementary: rgb(102, 102, 102);
+$color-light-primary: #ffffff;
+$color-light-complementary: #eee;
+
+
+$shadow: inset 0.2rem 0.2rem 0.5rem #777,
+   inset -0.2rem -0.2rem 0.5rem #aaa,
+   0 2px 2px #666;
+
+//font
+$main-font-family: "Open Sans", Arial, sans-serif;

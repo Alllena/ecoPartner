@@ -1,0 +1,5 @@
+@mixin matte-glass () {
+   -webkit-backdrop-filter: blur(20px) brightness(90%);
+   backdrop-filter: blur(20px) brightness(90%);
+   box-shadow: inset -0.1rem -0.1rem 0.2rem #aaa;
+}

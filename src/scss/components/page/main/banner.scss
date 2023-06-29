@@ -1,0 +1,55 @@
+.banner {
+   height: 17.2em;
+   background-image: url("/img/minsk_industrial.jpeg");
+   background-size: cover;
+   background-position: center;
+   position: relative;
+   z-index: -1;
+
+
+   &>.wrapper {
+      @include flex-column-center(25px);
+      height: 100%;
+
+   }
+
+   &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(109, 126, 130, 0.5);
+      z-index: -1;
+      -webkit-backdrop-filter: blur(2px) brightness(90%);
+      backdrop-filter: blur(3px) brightness(50%) sepia(90%);
+      // backdrop-filter: blur(3px) brightness(90%) grayscale(70%) sepia(90%);
+   }
+
+   &__text {
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: 900;
+      display: inline;
+      text-transform: uppercase;
+      color: $color-light-primary;
+
+      span {
+         color: $color-contrast;
+      }
+   }
+}
+
+@media screen and (max-width: 480px) {
+   .banner {
+      h2 {
+         font-size: 2.5em;
+      }
+
+      span {
+         width: 30vw;
+         border-bottom: 3px solid $color-light-primary;
+      }
+   }
+}

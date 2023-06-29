@@ -1,0 +1,79 @@
+@import 'variables';
+@import 'mixins';
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+}
+
+a,
+img,
+button,
+input {
+  border: none;
+  outline: none;
+  background: inherit;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+details,
+details summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+body {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: $main-font-family;
+  font-size: 18px;
+  background-color: $color-dark-complementary;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 $wrapper-offset;
+  max-width: $wrapper-width;
+}
+
+.section {
+  padding: 2em 0;
+}
