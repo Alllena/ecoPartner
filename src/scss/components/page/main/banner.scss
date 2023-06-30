@@ -1,5 +1,5 @@
 .banner {
-   height: 17.2em;
+   height: 20em;
    background-image: url("/img/minsk_industrial.jpeg");
    background-size: cover;
    background-position: center;
@@ -8,6 +8,7 @@
 
 
    &>.wrapper {
+      padding-top: 100px;
       @include flex-column-center(25px);
       height: 100%;
 
