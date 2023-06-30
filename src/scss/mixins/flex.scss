@@ -2,6 +2,13 @@
   display: flex;
 }
 
+@mixin flex-center-end ($gap: 0px) {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: $gap;
+}
+
 @mixin flex-start-end ($gap: 0px) {
   display: flex;
   align-items: end;
