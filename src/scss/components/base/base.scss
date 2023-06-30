@@ -1,0 +1,39 @@
+.section__container {
+   @include flex-all-center;
+   position: absolute;
+   left: 0;
+   top: 0;
+
+   .section__title {
+      color: $color-light-primary;
+      background-color: $color-contrast;
+      min-width: 250px;
+      padding: 1.2em;
+      @include flex-all-center;
+      text-transform: uppercase;
+   }
+
+   .section__link {
+      @include flex-all-center(10px);
+      padding: 1.2em;
+      transition: color 0.3s lease-out;
+
+      &_light {
+         color: $color-dark-primary;
+
+         path {
+            stroke: $color-dark-primary;
+            transition: stroke 0.3s lease-out;
+         }
+      }
+
+      &_light:hover {
+         color: $color-contrast;
+
+         path {
+            stroke: $color-contrast;
+         }
+      }
+
+   }
+}

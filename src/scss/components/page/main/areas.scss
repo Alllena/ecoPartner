@@ -1,0 +1,79 @@
+.areas {
+   background-color: $color-light-complementary;
+
+   .wrapper {
+      padding-top: 4em;
+      padding-bottom: 2em;
+      position: relative;
+   }
+
+   &__list {
+      padding: 1em;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 1em;
+   }
+
+   &__item {}
+
+   &__link {
+      @include flex-column-center(15px);
+      color: $color-dark-complementary;
+      position: relative;
+      padding: 1em;
+      text-transform: uppercase;
+      font-weight: 800;
+      text-align: center;
+      height: 100%;
+
+      svg {
+         width: 60px;
+         height: 60px;
+      }
+
+      path {
+         transition: fill 0.3s lease-out;
+      }
+
+      &::before,
+      &::after {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         transition: all 0.3s ease-in-out;
+         transform: scale(0.8);
+      }
+
+      &::after {
+         border-top: 3px solid transparent;
+         border-left: 3px solid transparent;
+      }
+
+      &::before {
+         border-bottom: 3px solid transparent;
+         border-right: 3px solid transparent;
+      }
+
+      &:hover {
+         color: $color-contrast;
+
+         path {
+            fill: $color-contrast;
+            transition: fill 0.3s lease-out;
+         }
+
+         &::before,
+         &::after {
+            border-bottom: 3px solid $color-contrast;
+            border-right: 3px solid $color-contrast;
+            border-top: 3px solid $color-contrast;
+            border-left: 3px solid $color-contrast;
+            transform: scale(1);
+         }
+      }
+   }
+}
