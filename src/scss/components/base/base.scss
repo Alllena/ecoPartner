@@ -1,7 +1,7 @@
 .section__container {
    @include flex-all-center;
    position: absolute;
-   left: 0;
+   left: $wrapper-offset;
    top: 0;
 
    .section__title {

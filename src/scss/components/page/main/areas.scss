@@ -15,8 +15,6 @@
       gap: 1em;
    }
 
-   &__item {}
-
    &__link {
       @include flex-column-center(15px);
       color: $color-dark-complementary;

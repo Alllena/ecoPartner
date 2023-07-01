@@ -1,0 +1,62 @@
+.services {
+   background-color: $color-dark-complementary;
+
+   .wrapper {
+      padding-top: 4em;
+      padding-bottom: 2em;
+      position: relative;
+   }
+
+   .section__link {
+      &_light:hover {
+         color: $color-light-primary;
+
+         path {
+            stroke: $color-light-primary;
+         }
+      }
+   }
+
+   &__list {
+      padding: 1em 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 3px;
+   }
+
+   &__item {
+      padding: 5px;
+      border: 2px dashed $color-contrast;
+      transition: background-color 0.3s lease-out;
+
+      &:hover {
+         background-color: $color-contrast;
+      }
+
+      &_main {
+         background-color: $color-contrast;
+      }
+   }
+
+   &__link {
+      color: $color-light-primary;
+      font-size: 16px;
+      font-weight: 300;
+      @include flex-all-center;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+
+      &_main {
+         text-transform: uppercase;
+         font-weight: 600;
+         transition: color 0.3s lease-out;
+
+         &:hover {
+            color: $color-dark-complementary;
+            font-weight: 700;
+         }
+      }
+   }
+}
