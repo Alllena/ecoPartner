@@ -1,0 +1,21 @@
+.about {
+   background-color: $color-light-complementary;
+
+   .wrapper {
+      padding-top: 4em;
+      padding-bottom: 2em;
+      position: relative;
+   }
+
+   &__body {
+      @include flex-all-sb(50px);
+   }
+
+   &__img {
+      height: 400px;
+   }
+
+   &__text {
+      @include flex-column-start(15px)
+   }
+}
