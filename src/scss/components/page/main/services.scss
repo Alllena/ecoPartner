@@ -28,14 +28,15 @@
    &__item {
       padding: 5px;
       border: 2px dashed $color-contrast;
-      transition: background-color 0.3s lease-out;
+      transition: all 0.3s linear;
 
       &:hover {
          background-color: $color-contrast;
       }
 
       &_main {
-         background-color: $color-contrast;
+         background-color: $color-light-complementary;
+         border: none;
       }
    }
 
@@ -49,13 +50,13 @@
       text-align: center;
 
       &_main {
+         color: $color-dark-complementary;
          text-transform: uppercase;
          font-weight: 600;
-         transition: color 0.3s lease-out;
+         transition: color 0.3s ease;
 
          &:hover {
-            color: $color-dark-complementary;
-            font-weight: 700;
+            color: $color-light-primary;
          }
       }
    }
