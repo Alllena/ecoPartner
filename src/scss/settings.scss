@@ -38,25 +38,33 @@ input {
   background: inherit;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+}
+
+textarea {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  resize: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: inherit;
+  box-sizing: border-box;
+}
+
 img {
   height: auto;
   max-width: 100%;
   object-fit: cover;
 }
 
-details,
-details summary {
-  cursor: pointer;
-  list-style: none;
-}
-
-details summary::-webkit-details-marker {
-  display: none;
-}
-
-details summary::-webkit-details-marker {
-  display: none;
-}
 
 body {
   height: 100%;
