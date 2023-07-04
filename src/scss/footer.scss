@@ -1,0 +1,44 @@
+.footer {
+   .wrapper {
+      padding-top: 2em;
+      padding-bottom: 2em;
+      @include flex-all-sb;
+   }
+
+   &__info {
+      @include flex-all-sb;
+   }
+
+   .logo {
+      color: $color-light-primary;
+      padding-right: 20px;
+      margin-right: 20px;
+      border-right: 3px solid $color-light-primary;
+      border-bottom: none;
+   }
+
+   &__copyright {
+      color: $color-light-primary;
+      font-size: 0.8em;
+   }
+
+   &__social {
+      @include flex-all-sb(20px);
+   }
+
+   .social {
+      transition: fill 0.3s;
+
+      &__instagram {
+         &:hover path {
+            fill: url(#paint0_linear_3_8182);
+         }
+      }
+
+      &__telegram {
+         &:hover path {
+            fill: #34AADF;
+         }
+      }
+   }
+}
