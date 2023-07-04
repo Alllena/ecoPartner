@@ -1,0 +1,38 @@
+.news {
+   background-color: $color-light-complementary;
+
+   .wrapper {
+      padding-top: 6em;
+      padding-bottom: 3em;
+      position: relative;
+   }
+
+   &__list {
+      @include flex-start-sb(45px);
+   }
+
+   &__item {
+      @include flex-column-sb(25px);
+      flex: 1;
+   }
+
+
+   &__title {
+      color: $color-dark-primary;
+      font-weight: 700;
+      transition: color 0.3s ease-in-out;
+
+      &_link {
+         &:hover {
+            color: $color-contrast;
+         }
+      }
+   }
+
+
+   &__date {
+      font-size: 0.9em;
+      padding-left: 15px;
+      border-left: 3px solid $color-contrast;
+   }
+}
