@@ -27,7 +27,9 @@
    }
 
    .social {
-      transition: fill 0.3s;
+      path {
+         transition: fill 0.3s linear;
+      }
 
       &__instagram {
          &:hover path {
