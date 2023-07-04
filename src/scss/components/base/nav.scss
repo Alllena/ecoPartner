@@ -110,10 +110,14 @@
    top: 0;
    right: 0;
    bottom: 0;
-   background: $color-dark-complementary;
-   border-left: 1px solid $color-dark-border;
-   width: max-content;
-   z-index: 10;
+
+   &__container {
+      position: relative;
+      background: $color-dark-complementary;
+      border-left: 1px solid $color-dark-border;
+      z-index: 10;
+      height: 100%;
+   }
 
    .btn-container {
       padding: 1em;
@@ -188,7 +192,7 @@
    }
 
    .nav.nav-hidden {
-      padding: 5em 1em;
+      padding: 7em 1em;
       position: absolute;
       left: 100%;
       top: 0;
@@ -239,5 +243,78 @@
 
    .nav__item {
       align-items: start;
+   }
+
+   .contacts {
+      position: relative;
+      height: 90px;
+   }
+
+   .contacts__link {
+      z-index: 10;
+      @include flex-all-center (15px);
+      border: none;
+      position: absolute;
+      background: $color-dark-complementary;
+      transition: all 0.3s ease-in-out;
+      padding: 10px 20px;
+      left: 0;
+
+      &_tel {
+         top: 0;
+      }
+
+      &_mail {
+         bottom: 0;
+      }
+
+      &:hover {
+         transform: translateX(-100%);
+         left: 100%;
+      }
+
+      svg {
+         height: 25px;
+         width: 25px;
+      }
+
+      .contacts__text {
+         width: max-content;
+         color: $color-light-primary;
+      }
+
+      &::before,
+      &::after {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         transition: all 0.3s ease-in-out;
+         transform: scale(0.8);
+      }
+
+      &::after {
+         border-top: 3px solid transparent;
+         border-left: 3px solid transparent;
+      }
+
+      &::before {
+         border-bottom: 3px solid transparent;
+         border-right: 3px solid transparent;
+      }
+
+      &:hover {
+
+         &::before,
+         &::after {
+            border-bottom: 3px solid $color-contrast;
+            border-right: 3px solid $color-contrast;
+            border-top: 3px solid $color-contrast;
+            border-left: 3px solid $color-contrast;
+            transform: scale(1);
+         }
+      }
    }
 }
