@@ -81,3 +81,9 @@ body {
   padding: 0 $wrapper-offset;
   max-width: $wrapper-width;
 }
+
+.inner-page {
+  .wrapper {
+    margin: 0 60px 0 350px;
+  }
+}

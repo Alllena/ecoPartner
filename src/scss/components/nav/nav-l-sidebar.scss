@@ -1,0 +1,57 @@
+.nav-l-sidebar {
+   background-image: url("/img/minsk_industrial.jpeg");
+   // background: $color-dark-complementary;
+   padding: 3em 3em;
+   position: fixed;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   z-index: 12;
+   @include accordion;
+   max-width: 350px;
+   @include flex-column-start-center(30px);
+
+   &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgb(102, 102, 102, 0.8);
+      z-index: -1;
+      backdrop-filter: blur(3px) brightness(90%) grayscale(70%) sepia(90%);
+   }
+
+   .nav {
+      border: 3px solid $color-dark-border;
+      padding-bottom: 5px;
+
+      &__item {
+         justify-content: start;
+         padding: 0 1em;
+      }
+
+      &__link {
+         width: 100%;
+         justify-content: start;
+      }
+
+      .accordion {
+         border-bottom: 3px solid $color-dark-border;
+      }
+
+      .accordion__body .nav__link {
+         font-size: 0.9em;
+      }
+
+      button {
+         font-weight: 500;
+         font-size: 1em;
+      }
+
+      p.nav__link:hover::before {
+         content: none;
+      }
+   }
+}

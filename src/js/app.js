@@ -7,3 +7,5 @@ burger();
 
 import { formCheck } from "./modules/form.js";
 formCheck();
+
+import "./modules/accordion.js";

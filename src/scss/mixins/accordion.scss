@@ -1,0 +1,49 @@
+@mixin accordion {
+   .accordion__list {
+      .accordion {
+         .accordion__body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s linear;
+         }
+
+         &.open {
+            .accordion__body {
+               max-height: 500px;
+               overflow: hidden;
+               transition: max-height 0.7s ease-out;
+            }
+
+            .accordion__header::before {
+               transform: rotate(180deg);
+               transition: transform 0.7s ease;
+            }
+         }
+
+         .accordion__header {
+            padding: 0.5rem;
+            width: 100%;
+            position: relative;
+
+            &::before {
+               top: calc(50% - 5px);
+               right: 15px;
+               background: url("data:image/svg+xml;charset=utf8,%3Csvg%20width%3D'15'%20height%3D'10'%20viewBox%3D'0%200%2026%2016'%20fill%3D'none'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M22.85%200.349609L13%2010.1996L3.15%200.349608L0.5%202.99961L13%2015.4996L25.5%202.99961L22.85%200.349609Z'%20fill%3D'%23ffffff'%20%2F%3E%3C%2Fsvg%3E") no-repeat;
+               width: 15px;
+               height: 10px;
+               content: "";
+               position: absolute;
+               transition: transform 0.7s ease;
+            }
+
+            &:hover {
+               cursor: pointer;
+            }
+         }
+
+         .accordion__content {
+            padding: 10px 20px;
+         }
+      }
+   }
+}
