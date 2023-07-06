@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html', {
+"title": "ECOLOGY*SUPPORT. Новости"
+})
+
+<body class="inner-page">
+   @@include('html/components/page/header-inner-page.html', {
+   "title": "новости"
+   })
+   @@include('html/nav-r-sidebar.html', {})
+   @@include('html/nav-l-sidebar.html', {})
+   <main>
+      <!-- @@include('html/components/page/about/description.html', {}) -->
+      @@include('html/components/page/feedback.html', {})
+   </main>
+   @@include('html/footer.html', {});
+   <script src="js/app.min.js"></script>
+   <script src="https://unpkg.com/imask"></script>
+</body>
+
+</html>
