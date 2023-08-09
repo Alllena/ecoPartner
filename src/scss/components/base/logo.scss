@@ -1,12 +1,3 @@
 .logo {
    @include flex-all-sb;
-   color: $color-contrast;
-   width: max-content;
-   height: max-content;
-   font-size: 1em;
-   font-weight: 700;
-   border-bottom: 3px solid $color-contrast;
-   padding-bottom: 3px;
-   text-transform: uppercase;
-
 }

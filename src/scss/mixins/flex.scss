@@ -1,5 +1,6 @@
 @mixin flex ($gap: 0px) {
   display: flex;
+  gap: $gap;
 }
 
 @mixin flex-center-end ($gap: 0px) {

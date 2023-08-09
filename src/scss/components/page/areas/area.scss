@@ -1,0 +1,97 @@
+.area {
+   background-color: $color-light-complementary;
+   @include accordion;
+
+   &__info {
+      background-color: $color-contrast;
+      padding: 15px 10px;
+      color: $color-light-complementary;
+      margin-bottom: 1em;
+
+      h3 {
+         text-align: center;
+         text-transform: uppercase;
+         font-weight: 400;
+      }
+
+      p,
+      h3 {
+         margin-bottom: 1em;
+      }
+
+      .area__link_tel {
+         font-size: 1em;
+         display: inline-block
+      }
+   }
+
+   .wrapper {
+      @include flex(50px);
+      padding-bottom: 1em;
+   }
+
+   .outline {
+      flex: 1.3;
+   }
+
+   .questions {
+      flex: 2;
+   }
+
+   .questions__answer {
+      @include flex-column-start(15px);
+
+      ul {
+         @include flex-column-start(5px)
+      }
+
+      li {
+         padding: 2px 1.6em;
+         position: relative;
+
+         &::after {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: $color-contrast;
+            left: 0.7em;
+            top: 0.7em;
+         }
+      }
+   }
+
+   .accordion__list {
+
+      .accordion {
+         border: 1px solid $color-contrast;
+         margin-bottom: 20px;
+
+         &__header {
+            @include flex (10px);
+
+
+            &::before {
+               background: url("data:image/svg+xml;charset=utf8,%3Csvg%20width%3D'15'%20height%3D'10'%20viewBox%3D'0%200%2026%2016'%20fill%3D'none'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M22.85%200.349609L13%2010.1996L3.15%200.349608L0.5%202.99961L13%2015.4996L25.5%202.99961L22.85%200.349609Z'%20fill%3D'%2300b300'%20%2F%3E%3C%2Fsvg%3E") no-repeat;
+            }
+
+            p {
+               text-align: start;
+               margin-right: 15px;
+            }
+         }
+
+         &__content {
+            margin-left: 18px;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+
+
+            border-left: 1px solid $color-contrast;
+         }
+      }
+   }
+
+
+}

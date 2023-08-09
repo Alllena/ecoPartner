@@ -1,7 +1,7 @@
 @mixin accordion {
    .accordion__list {
       .accordion {
-         .accordion__body {
+         &__body {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.5s linear;
@@ -9,7 +9,7 @@
 
          &.open {
             .accordion__body {
-               max-height: 500px;
+               max-height: 1000px;
                overflow: hidden;
                transition: max-height 0.7s ease-out;
             }
@@ -20,7 +20,7 @@
             }
          }
 
-         .accordion__header {
+         &__header {
             padding: 0.5rem;
             width: 100%;
             position: relative;
@@ -41,7 +41,7 @@
             }
          }
 
-         .accordion__content {
+         &__content {
             padding: 10px 20px;
          }
       }
